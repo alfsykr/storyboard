@@ -944,6 +944,12 @@ export default function App() {
         )}
 
       </main>
+
+      {/* AI Image Disclaimer Footer */}
+      <footer className="footer-edu">
+        <span>🤖 Semua gambar pada media pembelajaran ini dibuat menggunakan Kecerdasan Buatan (AI)</span>
+      </footer>
     </div>
   );
 }
+

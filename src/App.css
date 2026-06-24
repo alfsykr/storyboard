@@ -1968,3 +1968,24 @@
     display: none !important;
   }
 }
+
+.footer-edu {
+  padding: 12px 30px;
+  background-color: #f8fafc;
+  border-top: 1px solid rgba(15, 43, 72, 0.08);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+@media print {
+  .footer-edu {
+    display: none !important;
+  }
+}
+
