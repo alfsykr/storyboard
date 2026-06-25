@@ -3,7 +3,7 @@ import {
   ArrowRight, ArrowLeft, Play, Sparkles, BookOpen, 
   UserCheck, Heart, GraduationCap, Award, HelpCircle, 
   Gamepad2, Download, CheckSquare, CheckCircle2,
-  Volume2, VolumeX, Eye
+  Volume2, VolumeX, Eye, Mail, Briefcase, User, Home
 } from 'lucide-react';
 import './App.css';
 
@@ -70,7 +70,7 @@ const ConfettiEffect = () => {
 
 export default function App() {
   const [page, setPage] = useState(1);
-  const totalPages = 19;
+  const totalPages = 20;
 
   // Audio simulation state (Narration texts)
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
@@ -166,6 +166,9 @@ export default function App() {
       case 'latihan':
         setPage(16); // Game 1
         break;
+      case 'pengembang':
+        setPage(20);
+        break;
       default:
         break;
     }
@@ -177,7 +180,8 @@ export default function App() {
     if (page === 9 || page === 10) return 'refleksi';
     if (page >= 11 && page <= 15) return 'kuis';
     if (page >= 16 && page <= 18) return 'latihan';
-    return 'selesai';
+    if (page === 19) return 'selesai';
+    return 'pengembang';
   };
 
   // Progress Bar Percentage
@@ -274,6 +278,12 @@ export default function App() {
             className={`nav-tab-btn ${getActiveTab() === 'latihan' ? 'active' : ''}`}
           >
             Latihan Game
+          </button>
+          <button 
+            onClick={() => handleTabClick('pengembang')} 
+            className={`nav-tab-btn ${getActiveTab() === 'pengembang' ? 'active' : ''}`}
+          >
+            Pengembang
           </button>
         </nav>
 
@@ -831,6 +841,10 @@ export default function App() {
                   >
                     <Sparkles size={18} /> Aktifkan Rencana Sukses
                   </button>
+                  <button onClick={() => setPage(20)} className="btn btn-outline btn-pengembang-trigger">
+                    <img src="/images/Pengembang.png" alt="Pengembang" className="avatar-mini" />
+                    <span>Pengembang</span>
+                  </button>
                 </div>
               </div>
             ) : (
@@ -937,9 +951,89 @@ export default function App() {
                   <button onClick={() => setIsPlanSaved(false)} className="btn btn-outline">
                     Ubah Rencana Sukses
                   </button>
+                  <button onClick={() => setPage(20)} className="btn btn-accent btn-pengembang-trigger">
+                    <img src="/images/Pengembang.png" alt="Pengembang" className="avatar-mini" />
+                    <span>Profil Pengembang</span>
+                  </button>
                 </div>
               </div>
             )}
+          </div>
+        )}
+
+        {/* HALAMAN 20: PROFIL PENGEMBANG */}
+        {page === 20 && (
+          <div className="pengembang-screen-container animated-fade">
+            <div className="pengembang-header-row">
+              <button onClick={() => setPage(1)} className="btn btn-accent btn-main-menu">
+                <Home size={18} /> MAIN MENU
+              </button>
+            </div>
+            
+            <div className="pengembang-card-layout">
+              <h2 className="pengembang-main-title">PENGEMBANG</h2>
+              
+              <div className="pengembang-card-body">
+                <div className="pengembang-photo-side">
+                  <div className="pengembang-photo-frame">
+                    <img src="/images/Pengembang.png" alt="Foto WAHYUNI, S.Pd. M.Pd" />
+                  </div>
+                </div>
+                
+                <div className="pengembang-info-side">
+                  <div className="info-pill-item">
+                    <div className="pill-label">
+                      <User size={18} />
+                      <span>NAMA</span>
+                    </div>
+                    <div className="pill-value">
+                      WAHYUNI, S.Pd. M.Pd
+                    </div>
+                  </div>
+                  
+                  <div className="info-pill-item">
+                    <div className="pill-label">
+                      <Briefcase size={18} />
+                      <span>UNIT KERJA</span>
+                    </div>
+                    <div className="pill-value">
+                      SPNF SKB KOTA BUKITTINGGI
+                    </div>
+                  </div>
+                  
+                  <div className="info-pill-item">
+                    <div className="pill-label">
+                      <Mail size={18} />
+                      <span>EMAIL</span>
+                    </div>
+                    <div className="pill-value">
+                      <a href="mailto:ridhawahyuni9173@gmail.com">ridhawahyuni9173@gmail.com</a>
+                    </div>
+                  </div>
+                  
+                  <div className="info-pill-item">
+                    <div className="pill-label">
+                      <Sparkles size={18} />
+                      <span>MEDIA SOSIAL</span>
+                    </div>
+                    <div className="pill-value social-links-row">
+                      <div className="social-link-badge">
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '4px' }}><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        <span>wahyuni ridha</span>
+                      </div>
+                      <div className="social-link-badge">
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '4px' }}><path d="M18 2h-3a5 5 0 0 0 -5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        <span>wahyuni ridha</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-footer-edu" style={{ marginTop: '20px' }}>
+              <button onClick={() => setPage(19)} className="btn btn-secondary">Kembali</button>
+            </div>
           </div>
         )}
 
