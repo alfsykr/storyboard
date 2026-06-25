@@ -250,7 +250,7 @@ export default function App() {
       {/* Top Navbar */}
       <header className="navbar-edu">
         <div className="nav-brand">
-          <h1>Langkah Fikri Menuju Mimpi</h1>
+          <h1>Optimis Menuju Impian</h1>
           <div className="nav-sub">Media Pembelajaran Interaktif Kesetaraan Paket B - Fase D</div>
         </div>
 
@@ -311,7 +311,7 @@ export default function App() {
             <div className="cover-bg-art"></div>
             <div className="cover-content">
               <div className="badge-title">SPNF SKB KOTA BUKITTINGGI</div>
-              <h1>LANGKAH FIKRI MENUJU MIMPI</h1>
+              <h1>OPTIMIS MENUJU IMPIAN</h1>
               <p>"Gagal bukan akhir dari perjalanan."</p>
               
               <div style={{ display: 'flex', justifyContent: 'center', gap: '15px', marginTop: '20px' }}>
@@ -321,8 +321,10 @@ export default function App() {
               </div>
 
               <div className="metadata-footer">
-                <p><strong>Pemberdayaan - Fase D | Tema: Rasa Optimis</strong></p>
-                <p>Oleh: WAHYUNI, S.Pd. M.Pd, SPNF SKB KOTA BUKITTINGGI</p>
+                <p><strong>Mata Pelajaran: Pemberdayaan (Fase D)</strong></p>
+                <p>Unit: Kepercayaan Diri | Sub Unit: Rasa Optimis</p>
+                <p>Program: Pendidikan Kesetaraan Paket B</p>
+                <p style={{ marginTop: '5px' }}>Oleh: WAHYUNI, S.Pd. M.Pd, SPNF SKB KOTA BUKITTINGGI</p>
               </div>
             </div>
           </div>
