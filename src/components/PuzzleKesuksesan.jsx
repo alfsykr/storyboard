@@ -5,11 +5,11 @@ export default function PuzzleKesuksesan({ onNext, onPrev }) {
   const correctOrder = ['step1', 'step2', 'step3', 'step4', 'step5'];
 
   const milestonesData = [
-    { id: 'step1', title: '1. Gagal Seleksi', color: '#ef4444', image: '/images/sad_fikri.png' },
-    { id: 'step2', title: '2. Dinasihati Ibu', color: '#ec4899', image: '/images/ibu_praying.png' },
-    { id: 'step3', title: '3. Bertemu Guru', color: '#3b82f6', image: '/images/guru_hasan.png' },
-    { id: 'step4', title: '4. Berlatih Keras', color: '#f59e0b', image: '/images/solusi_collage.png' },
-    { id: 'step5', title: '5. Lulus Tentara', color: '#10b981', image: '/images/fikri_lulus.png' }
+    { id: 'step1', title: '1. Gagal Seleksi', color: '#ef4444', image: '/images/sad_fikri.webp' },
+    { id: 'step2', title: '2. Dinasihati Ibu', color: '#ec4899', image: '/images/ibu_praying.webp' },
+    { id: 'step3', title: '3. Bertemu Guru', color: '#3b82f6', image: '/images/guru_hasan.webp' },
+    { id: 'step4', title: '4. Berlatih Keras', color: '#f59e0b', image: '/images/solusi_collage.webp' },
+    { id: 'step5', title: '5. Lulus Tentara', color: '#10b981', image: '/images/fikri_lulus.webp' }
   ];
 
   // Helper to shuffle the array

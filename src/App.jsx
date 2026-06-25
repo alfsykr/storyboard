@@ -474,8 +474,8 @@ export default function App() {
         {page === 4 && (
           <div className="storyboard-split animated-fade">
             <div className="story-visual-side">
-              {/* Image from public/images/cover_running.png */}
-              <img src="/images/cover_running.png" alt="Fikri berlari pagi di bawah matahari terbit" />
+              {/* Image from public/images/cover_running.webp */}
+              <img src="/images/cover_running.webp" alt="Fikri berlari pagi di bawah matahari terbit" />
             </div>
             <div className="story-narration-side">
               <div className="narration-header">
@@ -519,7 +519,7 @@ export default function App() {
         {page === 5 && (
           <div className="storyboard-split animated-fade">
             <div className="story-visual-side">
-              <img src="/images/sad_fikri.png" alt="Fikri melihat pengumuman kelulusan" />
+              <img loading="lazy" decoding="async" src="/images/sad_fikri.webp" alt="Fikri melihat pengumuman kelulusan" />
             </div>
             <div className="story-narration-side">
               <div className="narration-header">
@@ -561,7 +561,7 @@ export default function App() {
         {page === 6 && (
           <div className="storyboard-split animated-fade">
             <div className="story-visual-side">
-              <img src="/images/sad_fikri.png" alt="Fikri merenung di teras rumah malam hari" />
+              <img loading="lazy" decoding="async" src="/images/sad_fikri.webp" alt="Fikri merenung di teras rumah malam hari" />
             </div>
             <div className="story-narration-side">
               <div className="narration-header">
@@ -634,7 +634,7 @@ export default function App() {
         {page === 7 && (
           <div className="storyboard-split animated-fade">
             <div className="story-visual-side">
-              <img src="/images/ibu_praying.png" alt="Ibu Fikri berdoa dengan cahaya hangat di malam hari" />
+              <img loading="lazy" decoding="async" src="/images/ibu_praying.webp" alt="Ibu Fikri berdoa dengan cahaya hangat di malam hari" />
             </div>
             <div className="story-narration-side">
               <div className="narration-header">
@@ -667,7 +667,7 @@ export default function App() {
         {page === 8 && (
           <div className="storyboard-split animated-fade">
             <div className="story-visual-side">
-              <img src="/images/guru_hasan.png" alt="Guru Hasan menasihati Fikri" />
+              <img loading="lazy" decoding="async" src="/images/guru_hasan.webp" alt="Guru Hasan menasihati Fikri" />
             </div>
             <div className="story-narration-side">
               <div className="narration-header">
@@ -711,7 +711,7 @@ export default function App() {
         {page === 9 && (
           <div className="storyboard-split animated-fade">
             <div className="story-visual-side">
-              <img src="/images/solusi_collage.png" alt="Kolase kegiatan baru Fikri" />
+              <img loading="lazy" decoding="async" src="/images/solusi_collage.webp" alt="Kolase kegiatan baru Fikri" />
             </div>
             <div className="story-narration-side">
               <div className="narration-header">
@@ -790,7 +790,7 @@ export default function App() {
           <div className="storyboard-split animated-fade" style={{ position: 'relative' }}>
             <ConfettiEffect />
             <div className="story-visual-side">
-              <img src="/images/fikri_lulus.png" alt="Fikri lulus seleksi TNI dengan bahagia" />
+              <img loading="lazy" decoding="async" src="/images/fikri_lulus.webp" alt="Fikri lulus seleksi TNI dengan bahagia" />
             </div>
             <div className="story-narration-side">
               <div className="narration-header">
@@ -887,7 +887,7 @@ export default function App() {
 
             <div className="final-success-card">
               <div className="final-visual-box">
-                <img src="/images/fikri_soldier.png" alt="Fikri mengenakan seragam tentara bersama ibu dan Guru Hasan" />
+                <img loading="lazy" decoding="async" src="/images/fikri_soldier.webp" alt="Fikri mengenakan seragam tentara bersama ibu dan Guru Hasan" />
               </div>
               <div className="final-quotes-box">
                 <span className="inspiration-heading">Pesan Inspiratif</span>
@@ -984,7 +984,7 @@ export default function App() {
                     <Sparkles size={18} /> Aktifkan Rencana Sukses
                   </button>
                   <button onClick={() => setPage(22)} className="btn btn-outline btn-pengembang-trigger">
-                    <img src="/images/Pengembang.png" alt="Pengembang" className="avatar-mini" />
+                    <img src="/images/Pengembang.webp" alt="Pengembang" className="avatar-mini" />
                     <span>Pengembang</span>
                   </button>
                 </div>
@@ -1094,7 +1094,7 @@ export default function App() {
                     Ubah Rencana Sukses
                   </button>
                   <button onClick={() => setPage(22)} className="btn btn-accent btn-pengembang-trigger">
-                    <img src="/images/Pengembang.png" alt="Pengembang" className="avatar-mini" />
+                    <img src="/images/Pengembang.webp" alt="Pengembang" className="avatar-mini" />
                     <span>Profil Pengembang</span>
                   </button>
                 </div>
@@ -1118,7 +1118,7 @@ export default function App() {
               <div className="pengembang-card-body">
                 <div className="pengembang-photo-side">
                   <div className="pengembang-photo-frame">
-                    <img src="/images/Pengembang.png" alt="Foto WAHYUNI, S.Pd. M.Pd" />
+                    <img src="/images/Pengembang.webp" alt="Foto WAHYUNI, S.Pd. M.Pd" />
                   </div>
                 </div>
                 
