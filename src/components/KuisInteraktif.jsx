@@ -45,7 +45,7 @@ export default function KuisInteraktif({ page, onNext, onPrev, quizAnswers, setQ
     }
   ];
 
-  const currentIdx = page - 11; // Halaman 11 is index 0
+  const currentIdx = page - 13; // Halaman 13 is index 0
   const q = questions[currentIdx];
 
   const [selectedAnswer, setSelectedAnswer] = useState(quizAnswers[q.id] || (q.type === 'multi' ? [] : ''));

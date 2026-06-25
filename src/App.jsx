@@ -70,7 +70,7 @@ const ConfettiEffect = () => {
 
 export default function App() {
   const [page, setPage] = useState(1);
-  const totalPages = 20;
+  const totalPages = 22;
 
   // Audio simulation state (Narration texts)
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
@@ -158,16 +158,16 @@ export default function App() {
         setPage(1);
         break;
       case 'refleksi':
-        setPage(9);
-        break;
-      case 'kuis':
         setPage(11);
         break;
+      case 'kuis':
+        setPage(13);
+        break;
       case 'latihan':
-        setPage(16); // Game 1
+        setPage(18); // Game 1
         break;
       case 'pengembang':
-        setPage(20);
+        setPage(22);
         break;
       default:
         break;
@@ -176,11 +176,11 @@ export default function App() {
 
   // Check which tab should be active
   const getActiveTab = () => {
-    if (page >= 1 && page <= 8) return 'kisah';
-    if (page === 9 || page === 10) return 'refleksi';
-    if (page >= 11 && page <= 15) return 'kuis';
-    if (page >= 16 && page <= 18) return 'latihan';
-    if (page === 19) return 'selesai';
+    if (page >= 1 && page <= 10) return 'kisah';
+    if (page === 11 || page === 12) return 'refleksi';
+    if (page >= 13 && page <= 17) return 'kuis';
+    if (page >= 18 && page <= 20) return 'latihan';
+    if (page === 21) return 'selesai';
     return 'pengembang';
   };
 
@@ -330,8 +330,144 @@ export default function App() {
           </div>
         )}
 
-        {/* HALAMAN 2: TUJUAN PEMBELAJARAN */}
+        {/* HALAMAN 2: MENYAPA WARGA BELAJAR */}
         {page === 2 && (
+          <div className="storyboard-split animated-fade">
+            <div className="story-visual-side">
+              <img src="/images/cover_running.png" alt="Tutor Menyapa Warga Belajar" />
+            </div>
+            <div className="story-narration-side">
+              <div className="narration-header">
+                <span className="badge-title">Halaman 2 - Menyapa Warga Belajar</span>
+                <h2>Assalamu'alaikum Warahmatullahi Wabarakatuh</h2>
+              </div>
+              
+              <div className="narration-content">
+                <p style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-primary-light)', marginBottom: '15px' }}>
+                  Halo Warga Belajar Paket B 👋
+                </p>
+                <p style={{ fontSize: '1.05rem', lineHeight: '1.6', marginBottom: '20px' }}>
+                  Selamat datang pada pembelajaran interaktif <strong>"Rasa Optimis"</strong>.
+                </p>
+                <p style={{ fontSize: '1rem', lineHeight: '1.6', marginBottom: '25px', color: 'var(--color-text-dark)' }}>
+                  Hari ini kita akan belajar bagaimana membangun kepercayaan diri melalui sikap optimis dalam menghadapi kegagalan dan tantangan hidup.
+                </p>
+
+                <div className="dialog-container" style={{ marginTop: '15px' }}>
+                  <div className="dialog-bubble guru" style={{ borderLeftColor: 'var(--color-accent)' }}>
+                    <div className="dialog-speaker" style={{ color: 'var(--color-accent)', display: 'flex', alignItems: 'center', gap: '5px' }}>
+                      <span>👩‍🏫</span> Tutor Virtual
+                    </div>
+                    <p style={{ fontStyle: 'italic', fontWeight: 600, fontSize: '1.05rem', marginTop: '5px' }}>
+                      "Setiap kegagalan bukanlah akhir perjalanan, tetapi awal dari kesempatan baru."
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card-footer-edu">
+                <button onClick={handlePrev} className="btn btn-secondary">Kembali</button>
+                <button onClick={handleNext} className="btn btn-accent animated-pulse">
+                  Lanjut <Play size={14} fill="white" />
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* HALAMAN 3: PANDUAN PENGGUNAAN MEDIA */}
+        {page === 3 && (
+          <div className="storyboard-split animated-fade">
+            <div className="story-visual-side" style={{ padding: '25px', display: 'flex', flexDirection: 'column', justifyContent: 'center', backgroundColor: '#0f2b48', color: 'white', borderRadius: 'var(--radius-md)' }}>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '20px', borderBottom: '2px solid var(--color-accent)', paddingBottom: '10px', display: 'flex', alignItems: 'center', gap: '8px', color: 'white', fontFamily: 'var(--font-title)' }}>
+                <span>🎮</span> Ikon Pembelajaran
+              </h3>
+              
+              <div className="icons-guide-grid" style={{ display: 'flex', flexDirection: 'column', gap: '12px', width: '100%' }}>
+                <div className="icon-guide-card" style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '10px 15px', backgroundColor: 'rgba(255, 255, 255, 0.06)', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.12)' }}>
+                  <div style={{ fontSize: '1.3rem', width: '36px', height: '36px', backgroundColor: 'var(--color-primary-light)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>🏠</div>
+                  <span style={{ fontSize: '0.95rem', fontWeight: 600 }}>Home</span>
+                </div>
+                
+                <div className="icon-guide-card" style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '10px 15px', backgroundColor: 'rgba(255, 255, 255, 0.06)', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.12)' }}>
+                  <div style={{ fontSize: '1.3rem', width: '36px', height: '36px', backgroundColor: 'var(--color-accent)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>🔊</div>
+                  <span style={{ fontSize: '0.95rem', fontWeight: 600 }}>Audio</span>
+                </div>
+
+                <div className="icon-guide-card" style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '10px 15px', backgroundColor: 'rgba(255, 255, 255, 0.06)', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.12)' }}>
+                  <div style={{ fontSize: '1.3rem', width: '36px', height: '36px', backgroundColor: '#3b82f6', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>➡️</div>
+                  <span style={{ fontSize: '0.95rem', fontWeight: 600 }}>Next</span>
+                </div>
+
+                <div className="icon-guide-card" style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '10px 15px', backgroundColor: 'rgba(255, 255, 255, 0.06)', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.12)' }}>
+                  <div style={{ fontSize: '1.3rem', width: '36px', height: '36px', backgroundColor: '#64748b', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>⬅️</div>
+                  <span style={{ fontSize: '0.95rem', fontWeight: 600 }}>Back</span>
+                </div>
+
+                <div className="icon-guide-card" style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '10px 15px', backgroundColor: 'rgba(255, 255, 255, 0.06)', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.12)' }}>
+                  <div style={{ fontSize: '1.3rem', width: '36px', height: '36px', backgroundColor: 'var(--color-success)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>🎮</div>
+                  <span style={{ fontSize: '0.95rem', fontWeight: 600 }}>Game</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="story-narration-side">
+              <div className="narration-header">
+                <span className="badge-title">Halaman 3 - Panduan Penggunaan Media</span>
+                <h2>Cara Menggunakan Media</h2>
+              </div>
+              
+              <div className="narration-content">
+                <div className="instruction-steps-list" style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '10px' }}>
+                  <div className="instruction-step-item" style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '12px 18px', backgroundColor: '#f8fafc', borderRadius: '10px', borderLeft: '4px solid #3b82f6', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+                    <div style={{ color: '#3b82f6', fontWeight: 800, fontSize: '1.2rem' }}>1.</div>
+                    <div style={{ fontSize: '0.98rem', color: 'var(--color-text-dark)', lineHeight: '1.4' }}>
+                      Klik tombol <strong>Next</strong> untuk berpindah halaman.
+                    </div>
+                  </div>
+
+                  <div className="instruction-step-item" style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '12px 18px', backgroundColor: '#f8fafc', borderRadius: '10px', borderLeft: '4px solid var(--color-accent)', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+                    <div style={{ color: 'var(--color-accent)', fontWeight: 800, fontSize: '1.2rem' }}>2.</div>
+                    <div style={{ fontSize: '0.98rem', color: 'var(--color-text-dark)', lineHeight: '1.4' }}>
+                      Klik ikon <strong>audio</strong> untuk mendengarkan narasi.
+                    </div>
+                  </div>
+
+                  <div className="instruction-step-item" style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '12px 18px', backgroundColor: '#f8fafc', borderRadius: '10px', borderLeft: '4px solid #8b5cf6', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+                    <div style={{ color: '#8b5cf6', fontWeight: 800, fontSize: '1.2rem' }}>3.</div>
+                    <div style={{ fontSize: '0.98rem', color: 'var(--color-text-dark)', lineHeight: '1.4' }}>
+                      Klik <strong>objek yang aktif</strong>.
+                    </div>
+                  </div>
+
+                  <div className="instruction-step-item" style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '12px 18px', backgroundColor: '#f8fafc', borderRadius: '10px', borderLeft: '4px solid var(--color-success)', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+                    <div style={{ color: 'var(--color-success)', fontWeight: 800, fontSize: '1.2rem' }}>4.</div>
+                    <div style={{ fontSize: '0.98rem', color: 'var(--color-text-dark)', lineHeight: '1.4' }}>
+                      Kerjakan <strong>kuis dan permainan</strong>.
+                    </div>
+                  </div>
+
+                  <div className="instruction-step-item" style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '12px 18px', backgroundColor: '#f8fafc', borderRadius: '10px', borderLeft: '4px solid var(--color-primary-light)', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+                    <div style={{ color: 'var(--color-primary-light)', fontWeight: 800, fontSize: '1.2rem' }}>5.</div>
+                    <div style={{ fontSize: '0.98rem', color: 'var(--color-text-dark)', lineHeight: '1.4' }}>
+                      Isi <strong>refleksi</strong> pada akhir pembelajaran.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card-footer-edu" style={{ marginTop: '20px' }}>
+                <button onClick={handlePrev} className="btn btn-secondary">Kembali</button>
+                <button onClick={handleNext} className="btn btn-accent animated-pulse">
+                  Mulai Belajar <Play size={14} fill="white" />
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* HALAMAN 4: TUJUAN PEMBELAJARAN */}
+        {page === 4 && (
           <div className="storyboard-split animated-fade">
             <div className="story-visual-side">
               {/* Image from public/images/cover_running.png */}
@@ -339,7 +475,7 @@ export default function App() {
             </div>
             <div className="story-narration-side">
               <div className="narration-header">
-                <span className="badge-title">Halaman 2 - Tujuan Pembelajaran</span>
+                <span className="badge-title">Halaman 4 - Tujuan Pembelajaran</span>
                 <h2>Tujuan Pembelajaran Kita Hari Ini</h2>
               </div>
               
@@ -375,15 +511,15 @@ export default function App() {
           </div>
         )}
 
-        {/* HALAMAN 3: CERITA 1 (Gagal Seleksi) */}
-        {page === 3 && (
+        {/* HALAMAN 5: CERITA 1 (Gagal Seleksi) */}
+        {page === 5 && (
           <div className="storyboard-split animated-fade">
             <div className="story-visual-side">
               <img src="/images/sad_fikri.png" alt="Fikri melihat pengumuman kelulusan" />
             </div>
             <div className="story-narration-side">
               <div className="narration-header">
-                <span className="badge-title">Halaman 3 - Kegagalan Kedua</span>
+                <span className="badge-title">Halaman 5 - Kegagalan Kedua</span>
                 <h2>"Aku gagal lagi, Bu..."</h2>
               </div>
 
@@ -417,15 +553,15 @@ export default function App() {
           </div>
         )}
 
-        {/* HALAMAN 4: CERITA 2 (Konflik Batin) */}
-        {page === 4 && (
+        {/* HALAMAN 6: CERITA 2 (Konflik Batin) */}
+        {page === 6 && (
           <div className="storyboard-split animated-fade">
             <div className="story-visual-side">
               <img src="/images/sad_fikri.png" alt="Fikri merenung di teras rumah malam hari" />
             </div>
             <div className="story-narration-side">
               <div className="narration-header">
-                <span className="badge-title">Halaman 4 - Konflik Batin</span>
+                <span className="badge-title">Halaman 6 - Konflik Batin</span>
                 <h2>Pikiran Negatif Fikri</h2>
               </div>
 
@@ -490,15 +626,15 @@ export default function App() {
           </div>
         )}
 
-        {/* HALAMAN 5: KONFLIK (Doa Ibu) */}
-        {page === 5 && (
+        {/* HALAMAN 7: KONFLIK (Doa Ibu) */}
+        {page === 7 && (
           <div className="storyboard-split animated-fade">
             <div className="story-visual-side">
               <img src="/images/ibu_praying.png" alt="Ibu Fikri berdoa dengan cahaya hangat di malam hari" />
             </div>
             <div className="story-narration-side">
               <div className="narration-header">
-                <span className="badge-title">Halaman 5 - Doa & Harapan Ibu</span>
+                <span className="badge-title">Halaman 7 - Doa & Harapan Ibu</span>
                 <h2>Ketulusan Hati Ibu</h2>
               </div>
 
@@ -523,15 +659,15 @@ export default function App() {
           </div>
         )}
 
-        {/* HALAMAN 6: PENDIDIK MEMBERI MOTIVASI */}
-        {page === 6 && (
+        {/* HALAMAN 8: PENDIDIK MEMBERI MOTIVASI */}
+        {page === 8 && (
           <div className="storyboard-split animated-fade">
             <div className="story-visual-side">
               <img src="/images/guru_hasan.png" alt="Guru Hasan menasihati Fikri" />
             </div>
             <div className="story-narration-side">
               <div className="narration-header">
-                <span className="badge-title">Halaman 6 - Motivasi Pendidik</span>
+                <span className="badge-title">Halaman 8 - Motivasi Pendidik</span>
                 <h2>Nasihat Guru Hasan</h2>
               </div>
 
@@ -567,15 +703,15 @@ export default function App() {
           </div>
         )}
 
-        {/* HALAMAN 7: SOLUSI */}
-        {page === 7 && (
+        {/* HALAMAN 9: SOLUSI */}
+        {page === 9 && (
           <div className="storyboard-split animated-fade">
             <div className="story-visual-side">
               <img src="/images/solusi_collage.png" alt="Kolase kegiatan baru Fikri" />
             </div>
             <div className="story-narration-side">
               <div className="narration-header">
-                <span className="badge-title">Halaman 7 - Solusi & Rencana Baru</span>
+                <span className="badge-title">Halaman 9 - Solusi & Rencana Baru</span>
                 <h2>Membangun Disiplin Baru</h2>
               </div>
 
@@ -645,8 +781,8 @@ export default function App() {
           </div>
         )}
 
-        {/* HALAMAN 8: CERITA AKHIR */}
-        {page === 8 && (
+        {/* HALAMAN 10: CERITA AKHIR */}
+        {page === 10 && (
           <div className="storyboard-split animated-fade" style={{ position: 'relative' }}>
             <ConfettiEffect />
             <div className="story-visual-side">
@@ -654,7 +790,7 @@ export default function App() {
             </div>
             <div className="story-narration-side">
               <div className="narration-header">
-                <span className="badge-title">Halaman 8 - Akhir Perjuangan</span>
+                <span className="badge-title">Halaman 10 - Akhir Perjuangan</span>
                 <h2>Impian Menjadi Kenyataan!</h2>
               </div>
 
@@ -679,10 +815,10 @@ export default function App() {
           </div>
         )}
 
-        {/* HALAMAN 9: REFLEKSI 1 */}
-        {page === 9 && (
+        {/* HALAMAN 11: REFLEKSI 1 */}
+        {page === 11 && (
           <RefleksiSikap 
-            page={9}
+            page={11}
             onNext={handleNext}
             onPrev={handlePrev}
             reflectionData={reflectionData}
@@ -690,10 +826,10 @@ export default function App() {
           />
         )}
 
-        {/* HALAMAN 10: REFLEKSI 2 */}
-        {page === 10 && (
+        {/* HALAMAN 12: REFLEKSI 2 */}
+        {page === 12 && (
           <RefleksiSikap 
-            page={10}
+            page={12}
             onNext={handleNext}
             onPrev={handlePrev}
             reflectionData={reflectionData}
@@ -701,8 +837,8 @@ export default function App() {
           />
         )}
 
-        {/* HALAMAN 11 - 15: KUIS INTERAKTIF */}
-        {page >= 11 && page <= 15 && (
+        {/* HALAMAN 13 - 17: KUIS INTERAKTIF */}
+        {page >= 13 && page <= 17 && (
           <KuisInteraktif 
             page={page}
             onNext={handleNext}
@@ -712,35 +848,35 @@ export default function App() {
           />
         )}
 
-        {/* HALAMAN 16: GAME 1 - TANGGA OPTIMISME */}
-        {page === 16 && (
+        {/* HALAMAN 18: GAME 1 - TANGGA OPTIMISME */}
+        {page === 18 && (
           <TanggaOptimisme 
             onNext={handleNext}
             onPrev={handlePrev}
           />
         )}
 
-        {/* HALAMAN 17: GAME 2 - KUMPULKAN SEMANGAT */}
-        {page === 17 && (
+        {/* HALAMAN 19: GAME 2 - KUMPULKAN SEMANGAT */}
+        {page === 19 && (
           <KumpulkanSemangat 
             onNext={handleNext}
             onPrev={handlePrev}
           />
         )}
 
-        {/* HALAMAN 18: GAME 3 - PUZZLE KESUKSESAN */}
-        {page === 18 && (
+        {/* HALAMAN 20: GAME 3 - PUZZLE KESUKSESAN */}
+        {page === 20 && (
           <PuzzleKesuksesan 
             onNext={handleNext}
             onPrev={handlePrev}
           />
         )}
 
-        {/* HALAMAN 19: HALAMAN AKHIR */}
-        {page === 19 && (
+        {/* HALAMAN 21: HALAMAN AKHIR */}
+        {page === 21 && (
           <div className="final-screen-container animated-fade">
             <div className="card-header-edu">
-              <span className="badge-title">Halaman 19 - Halaman Akhir</span>
+              <span className="badge-title">Halaman 21 - Halaman Akhir</span>
               <h2>Selamat! Kamu Telah Menyelesaikan Pembelajaran</h2>
               <p className="subtitle">Sekarang, giliranmu merencanakan langkah sukses untuk cita-citamu sendiri.</p>
             </div>
@@ -843,7 +979,7 @@ export default function App() {
                   >
                     <Sparkles size={18} /> Aktifkan Rencana Sukses
                   </button>
-                  <button onClick={() => setPage(20)} className="btn btn-outline btn-pengembang-trigger">
+                  <button onClick={() => setPage(22)} className="btn btn-outline btn-pengembang-trigger">
                     <img src="/images/Pengembang.png" alt="Pengembang" className="avatar-mini" />
                     <span>Pengembang</span>
                   </button>
@@ -953,7 +1089,7 @@ export default function App() {
                   <button onClick={() => setIsPlanSaved(false)} className="btn btn-outline">
                     Ubah Rencana Sukses
                   </button>
-                  <button onClick={() => setPage(20)} className="btn btn-accent btn-pengembang-trigger">
+                  <button onClick={() => setPage(22)} className="btn btn-accent btn-pengembang-trigger">
                     <img src="/images/Pengembang.png" alt="Pengembang" className="avatar-mini" />
                     <span>Profil Pengembang</span>
                   </button>
@@ -963,8 +1099,8 @@ export default function App() {
           </div>
         )}
 
-        {/* HALAMAN 20: PROFIL PENGEMBANG */}
-        {page === 20 && (
+        {/* HALAMAN 22: PROFIL PENGEMBANG */}
+        {page === 22 && (
           <div className="pengembang-screen-container animated-fade">
             <div className="pengembang-header-row">
               <button onClick={() => setPage(1)} className="btn btn-accent btn-main-menu">
@@ -1034,7 +1170,7 @@ export default function App() {
             </div>
 
             <div className="card-footer-edu" style={{ marginTop: '20px' }}>
-              <button onClick={() => setPage(19)} className="btn btn-secondary">Kembali</button>
+              <button onClick={() => setPage(21)} className="btn btn-secondary">Kembali</button>
             </div>
           </div>
         )}

@@ -128,11 +128,11 @@ export default function RefleksiSikap({ page, onNext, onPrev, reflectionData, se
     }
   };
 
-  if (page === 9) {
+  if (page === 11) {
     return (
       <div className="reflection-container animated-fade">
         <div className="card-header-edu">
-          <span className="badge-title">Halaman 9 - Refleksi Sikap</span>
+          <span className="badge-title">Halaman 11 - Refleksi Diri</span>
           <h2>Pernahkah Kamu Mengalami Kegagalan?</h2>
           <p className="subtitle">Bagikan pengalamanmu secara jujur. Tidak ada jawaban salah.</p>
         </div>
@@ -214,7 +214,7 @@ export default function RefleksiSikap({ page, onNext, onPrev, reflectionData, se
   return (
     <div className="reflection-container animated-fade">
       <div className="card-header-edu">
-        <span className="badge-title">Halaman 10 - Mengelompokkan Sikap</span>
+        <span className="badge-title">Halaman 12 - Mengelompokkan Sikap</span>
         <h2>Tumbuhkan Sikap Optimisme</h2>
         <p className="subtitle">
           Seret sikap di bawah ini ke kolom yang tepat, atau <strong>klik kartu lalu klik kolom tujuan</strong>.
