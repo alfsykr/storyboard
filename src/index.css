@@ -63,6 +63,18 @@ body {
   justify-content: center;
 }
 
+@media (max-width: 768px) {
+  body {
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+  #root {
+    padding: 0;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
