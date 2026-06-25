@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  ArrowRight, ArrowLeft, Play, Sparkles, BookOpen, 
-  UserCheck, Heart, GraduationCap, Award, HelpCircle, 
+import {
+  ArrowRight, ArrowLeft, Play, Sparkles, BookOpen,
+  UserCheck, Heart, GraduationCap, Award, HelpCircle,
   Gamepad2, Download, CheckSquare, CheckCircle2,
   Volume2, VolumeX, Eye, Mail, Briefcase, User, Home
 } from 'lucide-react';
@@ -17,7 +17,7 @@ import PuzzleKesuksesan from './components/PuzzleKesuksesan';
 // Inline Confetti Canvas Particle Component
 const ConfettiEffect = () => {
   const canvasRef = React.useRef(null);
-  
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -246,7 +246,7 @@ export default function App() {
 
   return (
     <div className="app-container">
-      
+
       {/* Top Navbar */}
       <header className="navbar-edu">
         <div className="nav-brand">
@@ -255,32 +255,32 @@ export default function App() {
         </div>
 
         <nav className="nav-tabs">
-          <button 
-            onClick={() => handleTabClick('kisah')} 
+          <button
+            onClick={() => handleTabClick('kisah')}
             className={`nav-tab-btn ${getActiveTab() === 'kisah' ? 'active' : ''}`}
           >
             Kisah Fikri
           </button>
-          <button 
-            onClick={() => handleTabClick('refleksi')} 
+          <button
+            onClick={() => handleTabClick('refleksi')}
             className={`nav-tab-btn ${getActiveTab() === 'refleksi' ? 'active' : ''}`}
           >
             Refleksi Diri
           </button>
-          <button 
-            onClick={() => handleTabClick('kuis')} 
+          <button
+            onClick={() => handleTabClick('kuis')}
             className={`nav-tab-btn ${getActiveTab() === 'kuis' ? 'active' : ''}`}
           >
             Kuis Evaluasi
           </button>
-          <button 
-            onClick={() => handleTabClick('latihan')} 
+          <button
+            onClick={() => handleTabClick('latihan')}
             className={`nav-tab-btn ${getActiveTab() === 'latihan' ? 'active' : ''}`}
           >
             Latihan Game
           </button>
-          <button 
-            onClick={() => handleTabClick('pengembang')} 
+          <button
+            onClick={() => handleTabClick('pengembang')}
             className={`nav-tab-btn ${getActiveTab() === 'pengembang' ? 'active' : ''}`}
           >
             Pengembang
@@ -296,15 +296,15 @@ export default function App() {
 
       {/* Progress Bar Indicator */}
       <div className="progress-container">
-        <div 
-          className="progress-bar-fill" 
+        <div
+          className="progress-bar-fill"
           style={{ width: `${getProgressPercentage()}%` }}
         ></div>
       </div>
 
       {/* Interactive Page Container */}
       <main className="story-workspace">
-        
+
         {/* HALAMAN 1: COVER */}
         {page === 1 && (
           <div className="cover-layout animated-fade">
@@ -313,7 +313,7 @@ export default function App() {
               <div className="badge-title">SPNF SKB KOTA BUKITTINGGI</div>
               <h1>OPTIMIS MENUJU IMPIAN</h1>
               <p>"Gagal bukan akhir dari perjalanan."</p>
-              
+
               <div style={{ display: 'flex', justifyContent: 'center', gap: '15px', marginTop: '20px' }}>
                 <button onClick={handleNext} className="btn btn-accent btn-large animated-pulse">
                   <Play size={18} fill="white" /> Mulai Kisah
@@ -334,9 +334,9 @@ export default function App() {
         {page === 2 && (
           <div className="storyboard-split animated-fade">
             <div className="story-visual-side" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f8fafc' }}>
-              <img 
-                src="/images/karakter-guru-berhijab-lucu-membawa-kertas-dan-pena_380474-1009.avif" 
-                alt="Tutor Virtual Menyapa Warga Belajar" 
+              <img
+                src="/images/karakter-guru-berhijab-lucu-membawa-kertas-dan-pena_380474-1009.avif"
+                alt="Tutor Virtual Menyapa Warga Belajar"
                 style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '15px' }}
               />
             </div>
@@ -345,7 +345,7 @@ export default function App() {
                 <span className="badge-title">Halaman 2 - Menyapa Warga Belajar</span>
                 <h2>Assalamu'alaikum Warahmatullahi Wabarakatuh</h2>
               </div>
-              
+
               <div className="narration-content">
                 <p style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-primary-light)', marginBottom: '15px' }}>
                   Halo Warga Belajar Paket B 👋
@@ -386,13 +386,13 @@ export default function App() {
               <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '20px', borderBottom: '2px solid var(--color-accent)', paddingBottom: '10px', display: 'flex', alignItems: 'center', gap: '8px', color: 'white', fontFamily: 'var(--font-title)' }}>
                 <span>🎮</span> Ikon Pembelajaran
               </h3>
-              
+
               <div className="icons-guide-grid" style={{ display: 'flex', flexDirection: 'column', gap: '12px', width: '100%' }}>
                 <div className="icon-guide-card" style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '10px 15px', backgroundColor: 'rgba(255, 255, 255, 0.06)', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.12)' }}>
                   <div style={{ fontSize: '1.3rem', width: '36px', height: '36px', backgroundColor: 'var(--color-primary-light)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>🏠</div>
                   <span style={{ fontSize: '0.95rem', fontWeight: 600 }}>Home</span>
                 </div>
-                
+
                 <div className="icon-guide-card" style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '10px 15px', backgroundColor: 'rgba(255, 255, 255, 0.06)', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.12)' }}>
                   <div style={{ fontSize: '1.3rem', width: '36px', height: '36px', backgroundColor: 'var(--color-accent)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>🔊</div>
                   <span style={{ fontSize: '0.95rem', fontWeight: 600 }}>Audio</span>
@@ -414,13 +414,13 @@ export default function App() {
                 </div>
               </div>
             </div>
-            
+
             <div className="story-narration-side">
               <div className="narration-header">
                 <span className="badge-title">Halaman 3 - Panduan Penggunaan Media</span>
                 <h2>Cara Menggunakan Media</h2>
               </div>
-              
+
               <div className="narration-content">
                 <div className="instruction-steps-list" style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '10px' }}>
                   <div className="instruction-step-item" style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '12px 18px', backgroundColor: '#f8fafc', borderRadius: '10px', borderLeft: '4px solid #3b82f6', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
@@ -482,7 +482,7 @@ export default function App() {
                 <span className="badge-title">Halaman 4 - Tujuan Pembelajaran</span>
                 <h2>Tujuan Pembelajaran Kita Hari Ini</h2>
               </div>
-              
+
               <div className="narration-content">
                 <p style={{ marginBottom: '15px', fontWeight: 600 }}>
                   Setelah menyelesaikan modul pembelajaran interaktif ini, kamu diharapkan mampu:
@@ -534,9 +534,9 @@ export default function App() {
                 <p>
                   Hari itu terasa runtuh bagi Fikri. Ini adalah kegagalan kedua kalinya dalam seleksi masuk tentara. Mimpi yang ia pupuk sejak kecil rasanya semakin menjauh dan sulit digapai.
                 </p>
-                
+
                 <div className="audio-description-bar">
-                  <button 
+                  <button
                     onClick={() => setIsPlayingAudio(!isPlayingAudio)}
                     className="btn btn-secondary btn-icon"
                     style={{ padding: '6px 12px' }}
@@ -574,12 +574,12 @@ export default function App() {
                   Fikri duduk sendirian di teras rumah. Angin malam berembus dingin, mewakili kehampaan hatinya. Ia merasa masa depannya hancur dan ia mulai meragukan kemampuannya sendiri:
                 </p>
                 <p className="narration-quote">"Apakah aku memang ditakdirkan tidak mampu?"</p>
-                
+
                 <div className="thought-interact-box">
                   <p style={{ fontSize: '0.85rem', fontWeight: 600, color: '#fca5a5', marginBottom: '10px' }}>
                     👉 Ketuk pikiran negatif di bawah untuk menyingkirkannya dari kepala Fikri:
                   </p>
-                  
+
                   <div className="floating-thoughts-container">
                     {negativeThoughts.map(t => {
                       const isPopped = poppedThoughts.includes(t.id);
@@ -617,8 +617,8 @@ export default function App() {
                   {poppedThoughts.length > 0 && (
                     <button onClick={handleResetThoughts} className="btn btn-outline">Ulangi</button>
                   )}
-                  <button 
-                    onClick={handleNext} 
+                  <button
+                    onClick={handleNext}
                     className="btn btn-primary"
                     disabled={poppedThoughts.length < negativeThoughts.length}
                   >
@@ -644,7 +644,7 @@ export default function App() {
 
               <div className="narration-content">
                 <p>
-                  Malam kian larut. Sayup-sayup Fikri mendengar suara ibunya yang sedang berdoa dengan khusyuk di kamar. 
+                  Malam kian larut. Sayup-sayup Fikri mendengar suara ibunya yang sedang berdoa dengan khusyuk di kamar.
                   Cahaya lampu yang hangat menerangi keikhlasan di wajah sang ibu.
                 </p>
                 <p>
@@ -680,13 +680,13 @@ export default function App() {
                   Keesokan harinya, Fikri mengunjungi Guru Hasan di sekolah. Guru Hasan adalah pendidik yang selalu menjadi panutan Fikri.
                   Mendengar cerita Fikri, beliau tersenyum dan memberikan tantangan mental:
                 </p>
-                
+
                 <div className="dialog-container">
                   <div className="dialog-bubble guru">
                     <div className="dialog-speaker">Guru Hasan</div>
                     "Jika seorang calon tentara sudah menyerah bahkan sebelum ia diterjunkan ke medan pertempuran yang sesungguhnya, apakah menurutmu ia pantas menyandang gelar sebagai prajurit?"
                   </div>
-                  
+
                   <div className="dialog-bubble fikri">
                     <div className="dialog-speaker">Fikri</div>
                     (Fikri terdiam sejenak, merenungkan perkataan tajam gurunya...)
@@ -728,7 +728,7 @@ export default function App() {
                 </p>
 
                 <div className="solutions-grid">
-                  <div 
+                  <div
                     onClick={() => handleSolutionToggle('disciplin')}
                     className={`solution-card-item ${checkedSolutions.disciplin ? 'checked' : ''}`}
                   >
@@ -736,7 +736,7 @@ export default function App() {
                     <span>Disiplin Waktu & Jadwal</span>
                   </div>
 
-                  <div 
+                  <div
                     onClick={() => handleSolutionToggle('training')}
                     className={`solution-card-item ${checkedSolutions.training ? 'checked' : ''}`}
                   >
@@ -744,7 +744,7 @@ export default function App() {
                     <span>Berlatih Fisik Giat</span>
                   </div>
 
-                  <div 
+                  <div
                     onClick={() => handleSolutionToggle('studying')}
                     className={`solution-card-item ${checkedSolutions.studying ? 'checked' : ''}`}
                   >
@@ -752,7 +752,7 @@ export default function App() {
                     <span>Belajar Lebih Giat</span>
                   </div>
 
-                  <div 
+                  <div
                     onClick={() => handleSolutionToggle('praying')}
                     className={`solution-card-item ${checkedSolutions.praying ? 'checked' : ''}`}
                   >
@@ -760,7 +760,7 @@ export default function App() {
                     <span>Berdoa & Berserah Diri</span>
                   </div>
 
-                  <div 
+                  <div
                     onClick={() => handleSolutionToggle('listening')}
                     className={`solution-card-item ${checkedSolutions.listening ? 'checked' : ''}`}
                     style={{ gridColumn: '1 / -1' }}
@@ -773,8 +773,8 @@ export default function App() {
 
               <div className="card-footer-edu">
                 <button onClick={handlePrev} className="btn btn-secondary">Kembali</button>
-                <button 
-                  onClick={handleNext} 
+                <button
+                  onClick={handleNext}
                   className="btn btn-primary"
                   disabled={!isAllSolutionsChecked}
                 >
@@ -806,7 +806,7 @@ export default function App() {
                   Air mata bahagia mengalir deras membasahi pipinya. Di pelukannya, sang ibu menangis haru. Guru Hasan yang menyaksikan berdiri bangga.
                 </p>
                 <p style={{ marginTop: '10px' }}>
-                  Fikri berhasil mencapai impian terbesarnya karena satu hal: **Ia menolak untuk menyerah pada kegagalan.** 
+                  Fikri berhasil mencapai impian terbesarnya karena satu hal: **Ia menolak untuk menyerah pada kegagalan.**
                   Ia mengubah kesedihan menjadi bahan bakar semangat optimis yang luar biasa!
                 </p>
               </div>
@@ -821,7 +821,7 @@ export default function App() {
 
         {/* HALAMAN 11: REFLEKSI 1 */}
         {page === 11 && (
-          <RefleksiSikap 
+          <RefleksiSikap
             page={11}
             onNext={handleNext}
             onPrev={handlePrev}
@@ -832,7 +832,7 @@ export default function App() {
 
         {/* HALAMAN 12: REFLEKSI 2 */}
         {page === 12 && (
-          <RefleksiSikap 
+          <RefleksiSikap
             page={12}
             onNext={handleNext}
             onPrev={handlePrev}
@@ -843,7 +843,7 @@ export default function App() {
 
         {/* HALAMAN 13 - 17: KUIS INTERAKTIF */}
         {page >= 13 && page <= 17 && (
-          <KuisInteraktif 
+          <KuisInteraktif
             page={page}
             onNext={handleNext}
             onPrev={handlePrev}
@@ -854,7 +854,7 @@ export default function App() {
 
         {/* HALAMAN 18: GAME 1 - TANGGA OPTIMISME */}
         {page === 18 && (
-          <TanggaOptimisme 
+          <TanggaOptimisme
             onNext={handleNext}
             onPrev={handlePrev}
           />
@@ -862,7 +862,7 @@ export default function App() {
 
         {/* HALAMAN 19: GAME 2 - KUMPULKAN SEMANGAT */}
         {page === 19 && (
-          <KumpulkanSemangat 
+          <KumpulkanSemangat
             onNext={handleNext}
             onPrev={handlePrev}
           />
@@ -870,7 +870,7 @@ export default function App() {
 
         {/* HALAMAN 20: GAME 3 - PUZZLE KESUKSESAN */}
         {page === 20 && (
-          <PuzzleKesuksesan 
+          <PuzzleKesuksesan
             onNext={handleNext}
             onPrev={handlePrev}
           />
@@ -915,8 +915,8 @@ export default function App() {
                 <div className="form-grid-challenge">
                   <div className="input-field-group">
                     <label htmlFor="citaCita">Satu Cita-cita yang Ingin Dicapai:</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       id="citaCita"
                       className="input-text-style"
                       placeholder="Contoh: Menjadi wirausaha kuliner sukses, menjadi insinyur, dll."
@@ -927,8 +927,8 @@ export default function App() {
 
                   <div className="input-field-group">
                     <label htmlFor="langkah1">Langkah 1 (Mulai Hari Ini):</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       id="langkah1"
                       className="input-text-style"
                       placeholder="Contoh: Belajar resep masakan tradisional 1 jam setiap hari."
@@ -939,8 +939,8 @@ export default function App() {
 
                   <div className="input-field-group">
                     <label htmlFor="langkah2">Langkah 2 (Mulai Hari Ini):</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       id="langkah2"
                       className="input-text-style"
                       placeholder="Contoh: Berlatih konsisten bangun pagi pukul 05.00."
@@ -951,8 +951,8 @@ export default function App() {
 
                   <div className="input-field-group">
                     <label htmlFor="langkah3">Langkah 3 (Mulai Hari Ini):</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       id="langkah3"
                       className="input-text-style"
                       placeholder="Contoh: Meminta doa restu orang tua sebelum belajar."
@@ -976,8 +976,8 @@ export default function App() {
 
                 <div style={{ display: 'flex', justifyContent: 'center', gap: '15px' }}>
                   <button onClick={handlePrev} className="btn btn-secondary">Kembali</button>
-                  <button 
-                    onClick={() => setIsPlanSaved(true)} 
+                  <button
+                    onClick={() => setIsPlanSaved(true)}
                     className="btn btn-accent btn-large"
                     disabled={!citaCita.trim() || !langkah1.trim() || !langkah2.trim() || !langkah3.trim()}
                   >
@@ -992,7 +992,7 @@ export default function App() {
             ) : (
               <div id="printable-area" className="challenge-box-interactive success-plan-activated animated-scale" style={{ position: 'relative', overflow: 'hidden' }}>
                 <ConfettiEffect />
-                
+
                 <div style={{ textAlign: 'center', marginBottom: '20px' }}>
                   <span className="badge-title" style={{ fontSize: '0.85rem', padding: '6px 14px' }}>🎖️ RENCANA SUKSES WARGA BELAJAR AKTIF</span>
                   <h3 style={{ fontSize: '1.8rem', marginTop: '10px', color: 'var(--color-primary)' }}>Kartu Perjuangan Cita-Cita</h3>
@@ -1027,7 +1027,7 @@ export default function App() {
                     <p style={{ fontSize: '1.05rem', fontWeight: 'bold', color: calculateQuizScore() > 0 ? 'var(--color-success)' : 'var(--color-danger)', padding: '12px', backgroundColor: calculateQuizScore() > 0 ? 'rgba(16, 185, 129, 0.06)' : 'rgba(239, 68, 68, 0.06)', border: calculateQuizScore() > 0 ? '1px solid rgba(16, 185, 129, 0.15)' : '1px solid rgba(239, 68, 68, 0.15)', borderRadius: '8px', marginTop: '8px' }}>
                       📝 Pemahaman Materi: {calculateQuizScore()} / 100
                     </p>
-                    
+
                     {calculateQuizScore() === 0 && (
                       <p style={{ fontSize: '0.8rem', color: 'var(--color-danger)', marginTop: '6px', fontWeight: 600 }}>
                         ⚠️ Catatan: Skor Anda masih 0/100. Pastikan Anda telah menjawab kuis di menu "Kuis Evaluasi" dan menekan tombol "Kunci Jawaban" untuk menyimpan jawaban Anda di tiap pertanyaan.
@@ -1050,7 +1050,7 @@ export default function App() {
                             let statusIcon = "⚪";
                             let statusText = "Belum Dijawab";
                             let statusColor = "#64748b";
-                            
+
                             if (answer !== undefined && answer !== null) {
                               let isMatch = false;
                               if (q.type === 'single') {
@@ -1058,7 +1058,7 @@ export default function App() {
                               } else {
                                 isMatch = Array.isArray(answer) && answer.length === q.correct.length && answer.every(val => q.correct.includes(val));
                               }
-                              
+
                               if (isMatch) {
                                 statusIcon = "✅";
                                 statusText = "Benar";
@@ -1069,7 +1069,7 @@ export default function App() {
                                 statusColor = "var(--color-danger)";
                               }
                             }
-                            
+
                             return (
                               <li key={q.id} style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px', color: statusColor, fontWeight: 600 }}>
                                 <span>{statusIcon}</span>
@@ -1111,17 +1111,17 @@ export default function App() {
                 <Home size={18} /> MAIN MENU
               </button>
             </div>
-            
+
             <div className="pengembang-card-layout">
               <h2 className="pengembang-main-title">PENGEMBANG</h2>
-              
+
               <div className="pengembang-card-body">
                 <div className="pengembang-photo-side">
                   <div className="pengembang-photo-frame">
                     <img src="/images/Pengembang.webp" alt="Foto WAHYUNI, S.Pd. M.Pd" />
                   </div>
                 </div>
-                
+
                 <div className="pengembang-info-side">
                   <div className="info-pill-item">
                     <div className="pill-label">
@@ -1132,7 +1132,7 @@ export default function App() {
                       WAHYUNI, S.Pd. M.Pd
                     </div>
                   </div>
-                  
+
                   <div className="info-pill-item">
                     <div className="pill-label">
                       <Briefcase size={18} />
@@ -1142,7 +1142,7 @@ export default function App() {
                       SPNF SKB KOTA BUKITTINGGI
                     </div>
                   </div>
-                  
+
                   <div className="info-pill-item">
                     <div className="pill-label">
                       <Mail size={18} />
@@ -1152,7 +1152,7 @@ export default function App() {
                       <a href="mailto:ridhawahyuni9173@gmail.com">ridhawahyuni9173@gmail.com</a>
                     </div>
                   </div>
-                  
+
                   <div className="info-pill-item">
                     <div className="pill-label">
                       <Sparkles size={18} />
@@ -1160,11 +1160,11 @@ export default function App() {
                     </div>
                     <div className="pill-value social-links-row">
                       <div className="social-link-badge">
-                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '4px' }}><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '4px' }}><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
                         <span>wahyuni ridha</span>
                       </div>
                       <div className="social-link-badge">
-                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '4px' }}><path d="M18 2h-3a5 5 0 0 0 -5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '4px' }}><path d="M18 2h-3a5 5 0 0 0 -5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
                         <span>wahyuni ridha</span>
                       </div>
                     </div>
