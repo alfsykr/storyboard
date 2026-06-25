@@ -310,7 +310,6 @@ export default function App() {
           <div className="cover-layout animated-fade">
             <div className="cover-bg-art"></div>
             <div className="cover-content">
-              <div className="badge-title">SPNF SKB KOTA BUKITTINGGI</div>
               <h1>OPTIMIS MENUJU IMPIAN</h1>
               <p>"Gagal bukan akhir dari perjalanan."</p>
 
@@ -429,29 +428,22 @@ export default function App() {
                     </div>
                   </div>
 
-                  <div className="instruction-step-item" style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '12px 18px', backgroundColor: '#f8fafc', borderRadius: '10px', borderLeft: '4px solid var(--color-accent)', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
-                    <div style={{ color: 'var(--color-accent)', fontWeight: 800, fontSize: '1.2rem' }}>2.</div>
-                    <div style={{ fontSize: '0.98rem', color: 'var(--color-text-dark)', lineHeight: '1.4' }}>
-                      Klik ikon <strong>audio</strong> untuk mendengarkan narasi.
-                    </div>
-                  </div>
-
                   <div className="instruction-step-item" style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '12px 18px', backgroundColor: '#f8fafc', borderRadius: '10px', borderLeft: '4px solid #8b5cf6', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
-                    <div style={{ color: '#8b5cf6', fontWeight: 800, fontSize: '1.2rem' }}>3.</div>
+                    <div style={{ color: '#8b5cf6', fontWeight: 800, fontSize: '1.2rem' }}>2.</div>
                     <div style={{ fontSize: '0.98rem', color: 'var(--color-text-dark)', lineHeight: '1.4' }}>
                       Klik <strong>objek yang aktif</strong>.
                     </div>
                   </div>
 
                   <div className="instruction-step-item" style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '12px 18px', backgroundColor: '#f8fafc', borderRadius: '10px', borderLeft: '4px solid var(--color-success)', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
-                    <div style={{ color: 'var(--color-success)', fontWeight: 800, fontSize: '1.2rem' }}>4.</div>
+                    <div style={{ color: 'var(--color-success)', fontWeight: 800, fontSize: '1.2rem' }}>3.</div>
                     <div style={{ fontSize: '0.98rem', color: 'var(--color-text-dark)', lineHeight: '1.4' }}>
                       Kerjakan <strong>kuis dan permainan</strong>.
                     </div>
                   </div>
 
                   <div className="instruction-step-item" style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '12px 18px', backgroundColor: '#f8fafc', borderRadius: '10px', borderLeft: '4px solid var(--color-primary-light)', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
-                    <div style={{ color: 'var(--color-primary-light)', fontWeight: 800, fontSize: '1.2rem' }}>5.</div>
+                    <div style={{ color: 'var(--color-primary-light)', fontWeight: 800, fontSize: '1.2rem' }}>4.</div>
                     <div style={{ fontSize: '0.98rem', color: 'var(--color-text-dark)', lineHeight: '1.4' }}>
                       Isi <strong>refleksi</strong> pada akhir pembelajaran.
                     </div>
