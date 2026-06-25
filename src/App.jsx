@@ -324,7 +324,6 @@ export default function App() {
                 <p><strong>Mata Pelajaran: Pemberdayaan (Fase D)</strong></p>
                 <p>Unit: Kepercayaan Diri | Sub Unit: Rasa Optimis</p>
                 <p>Program: Pendidikan Kesetaraan Paket B</p>
-                <p style={{ marginTop: '5px' }}>Oleh: WAHYUNI, S.Pd. M.Pd, SPNF SKB KOTA BUKITTINGGI</p>
               </div>
             </div>
           </div>
